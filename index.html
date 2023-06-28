@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>game</title>
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+    <div id="d1">
+        <h2 id="chance">LET'S START</h2>
+    </div>
+    <div id="d2">
+        <button onclick="fun1()" >Snake</button>
+        <button onclick="fun2()" >Water</button>
+        <button onclick="fun3()" >Gun</button>
+    </div>
+    <div id="d3">
+        <h1 id="tit">Start</h1>
+        <h3 id="ch1">You select:none</h3>
+        <h3 id="ch2">Computer select:none</h3>
+      
+    </div>
+    <div id="d4">
+      
+     <button onclick="reload()">Play Again</button>   
+     </div>
+    </div>
+  <script>
+    let round=prompt("How many rounds do you want to play?")
+    let score1=0;
+    let score2=0;
+    let r=0;
+     function check(c,k){
+     
+       if(c==k){
+        document.getElementById('tit').innerHTML='Same';
+       }
+       else if((c=='Snake' && k=='Water')||(c=='Gun' && k=='Snake')||(c=='Water' && k=='Gun')){
+        score2+=1;
+        document.getElementById('tit').innerHTML='Computer win 1 point';
+      }
+      else if((k=='Snake' && c=='Water')||(k=='Gun' && c=='Snake')||(k=='Water' && c=='Gun')){
+        score1+=1;
+        document.getElementById('tit').innerHTML='You win 1 point';
+      }
+      r+=1;
+      document.getElementById('chance').innerHTML='Chances left:'+(round-r);
+      if(r>round){
+       
+        if(score1>score2){
+          
+          document.getElementById('d2').style.display='none';
+          document.getElementById('d3').style.display='none';
+          document.getElementById('d4').style.display='block';
+          document.getElementById('chance').innerHTML="You win";
+          document.getElementById('chance').id="chance2";
+      }
+      else if(score1<score2){
+        document.getElementById('d2').style.display='none';
+          document.getElementById('d3').style.display='none';
+          document.getElementById('d4').style.display='block';
+      document.getElementById('chance').innerHTML="Computer win";
+      document.getElementById('chance').id="chance2";
+      }
+      else{
+        document.getElementById('d2').style.display='none';
+          document.getElementById('d3').style.display='none';
+          document.getElementById('d4').style.display='block';
+        document.getElementById('chance').innerHTML="Both win";
+        document.getElementById('chance').id="chance2";
+      }
+    }
+    }
+    function fun1(){
+      const a=["Snake","Water","Gun"]
+    let c=a[Math.floor(Math.random()*a.length)]
+       document.getElementById('ch1').innerHTML='You select: Snake';
+       document.getElementById('ch2').innerHTML='Computer select: '+c;
+       let k="Snake";
+       check(c,k)
+    }
+    function fun2(){
+      const a=["Snake","Water","Gun"]
+    let c=a[Math.floor(Math.random()*a.length)]
+       document.getElementById('ch1').innerHTML='You select: Water';
+       document.getElementById('ch2').innerHTML='Computer select: '+c;
+       let k="Water";
+       check(c,k)
+    }
+    function fun3(){
+      const a=["Snake","Water","Gun"]
+    let c=a[Math.floor(Math.random()*a.length)]
+       document.getElementById('ch1').innerHTML='You select: Gun';
+       document.getElementById('ch2').innerHTML='Computer select: '+c;
+       let k="Gun";
+       check(c,k)
+    }
+
+    function reload(){
+      let m= document.getElementById('d4');
+                m.addEventListener("click",function(){window.location.reload()})
+              }
+    
+  </script>
+  
+</body>
+</html>
