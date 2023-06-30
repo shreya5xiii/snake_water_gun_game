@@ -95,12 +95,33 @@ body{
         font-size: 50px; 
     }
 }
-@media screen and (max-width:600px){
-
-    
+@media (max-width:600px){
     #main{
-       
-        width: 350px;
-       
+        width: 450px;
+        height: 600px;
+        margin-top: 150px;
     }
+    #d1{
+        font-size: 20px;
+        padding-top: 50px;
+    }
+    #d2{
+  
+        float:left;
+        width: 35%;
+        height: 80%;
+      
+    }
+    #d2 button{
+        width: 100%;
+        height: 20%;
+        font-size: 18px;
+    }
+    #d3{
+        width: 50%;
+        float:right;
+        font-size: 20px;
+        text-align: left;
+    }
+
 }
