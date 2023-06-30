@@ -85,19 +85,19 @@ body{
 }
 @keyframes ex{
     0%{
-        font-size: 47px;
+        font-size: 50px;
     }
     50%{
         font-size: 40px; 
         color: rgb(45, 3, 45);
     }
     100%{
-        font-size: 47px; 
+        font-size: 50px; 
     }
 }
 @media (max-width:600px){
     #main{
-        width: 450px;
+        width: 420px;
         height: 600px;
         margin-top: 150px;
     }
@@ -116,8 +116,8 @@ body{
     }
     #d3{
         width: 60%;
-        font-size: 18px;
         text-align: left;
     }
+ 
 
 }
