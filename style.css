@@ -106,10 +106,7 @@ body{
         padding-top: 50px;
     }
     #d2{
-  
-        float:left;
         width: 35%;
-        height: 80%;
       
     }
     #d2 button{
@@ -118,9 +115,8 @@ body{
         font-size: 18px;
     }
     #d3{
-        width: 50%;
-        float:right;
-        font-size: 20px;
+        width: 60%;
+        font-size: 18px;
         text-align: left;
     }
 
