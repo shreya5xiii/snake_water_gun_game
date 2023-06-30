@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>game</title>
+<title>html revise</title>
 <link href="style.css" rel="stylesheet">
 </head>
 <body>
@@ -19,7 +19,7 @@
     <div id="d3">
         <h1 id="tit">Start</h1>
         <h3 id="ch1">You select:none</h3>
-        <h3 id="ch2">Computer select:none</h3>
+        <h3 id="ch2">Enemy select:none</h3>
       
     </div>
     <div id="d4">
@@ -39,7 +39,7 @@
        }
        else if((c=='Snake' && k=='Water')||(c=='Gun' && k=='Snake')||(c=='Water' && k=='Gun')){
         score2+=1;
-        document.getElementById('tit').innerHTML='Computer win 1 point';
+        document.getElementById('tit').innerHTML='Enemy win 1 point';
       }
       else if((k=='Snake' && c=='Water')||(k=='Gun' && c=='Snake')||(k=='Water' && c=='Gun')){
         score1+=1;
@@ -61,7 +61,7 @@
         document.getElementById('d2').style.display='none';
           document.getElementById('d3').style.display='none';
           document.getElementById('d4').style.display='block';
-      document.getElementById('chance').innerHTML="Computer win";
+      document.getElementById('chance').innerHTML="Enemy win";
       document.getElementById('chance').id="chance2";
       }
       else{
