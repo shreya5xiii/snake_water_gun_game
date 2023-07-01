@@ -97,9 +97,9 @@ body{
 }
 @media (max-width:600px){
     #main{
-        width: 330px;
+        width: 350px;
         height: 500px;
-        margin-top: 150px;
+        margin-top: 120px;
     }
     #d1{
         font-size: 20px;
